@@ -92,40 +92,42 @@ const translateToMorse = (txt) => {
     // console.log(newOutputArrayValue)
 }
 
-// const translateToText = (txt) => {
-//     const outputArrayValue = [];
-//     const array = txt.split(' ');
-//     array.forEach(element => {
-//         console.log(element);
-//         // const jsonElement = Object.values(zmienna).filter((e) => { return e == element })
-//             // 
-//         outputArrayValue.push(zmienna[jsonElement]);
-//         console.log(jsonElement)
-//     })
-//     const newOutputArrayValue = outputArrayValue.join('');
-//     result.textContent = newOutputArrayValue;
-//     // userChoice.forEach(element => {
+const translateToText = (txt) => {
+    // console.log('t')
+    const outputArrayValue = [];
+    const array = txt.split(' ');
+    array.forEach(element => {
+        console.log(element);
+        // const jsonElement = Object.values(zmienna).filter((e) => { return e == element })
+        // 
+        const jsonElement = Object.keys(zmienna).filter((e) => { return zmienna[e] == element })
+        outputArrayValue.push(jsonElement);
+        console.log(jsonElement)
+    })
+    const newOutputArrayValue = outputArrayValue.join('');
+    result.textContent = newOutputArrayValue;
+    // userChoice.forEach(element => {
 
 
 
-//     //     console.log(element)
-//     //         // // console.log(zmienna[element]);
-//     //         // // // const jsonElement = 
-//     //         // // console.log(typeof zmienna.element)
-//     //         // // console.log(typeof zmienna.a)
-//     //         // const jsonElement = Object.keys(zmienna).filter((e) => {
+    //     console.log(element)
+    //         // // console.log(zmienna[element]);
+    //         // // // const jsonElement = 
+    //         // // console.log(typeof zmienna.element)
+    //         // // console.log(typeof zmienna.a)
+    //         // const jsonElement = Object.keys(zmienna).filter((e) => {
 
-//     //     //     return e == element;
+    //     //     return e == element;
 
-//     //     // });
-//     //     // outputArrayValue.push(zmienna[jsonElement]);
+    //     // });
+    //     // outputArrayValue.push(zmienna[jsonElement]);
 
-//     //     // // const parsedJsonElement = jsonElement.join('');
-//     //     // // console.log(zmienna.parsedJsonElement);
-//     // });
-//     // const newOutputArrayValue = outputArrayValue.join('');
-//     // result.textContent = newOutputArrayValue;
-// }
+    //     // // const parsedJsonElement = jsonElement.join('');
+    //     // // console.log(zmienna.parsedJsonElement);
+    // });
+    // const newOutputArrayValue = outputArrayValue.join('');
+    // result.textContent = newOutputArrayValue;
+}
 
-// // console.log(userChoice)
-// // const element = 'a';
+// console.log(userChoice)
+// const element = 'a';
